@@ -1,0 +1,11 @@
+{
+  "name": "ecommerce-analytics-platform",
+  "private": true,
+  "scripts": {
+    "dev:web": "pnpm --dir apps/web dev",
+    "build:web": "pnpm --dir apps/web build",
+    "lint:web": "pnpm --dir apps/web lint",
+    "dev:api": "cd services/api && .venv/bin/uvicorn app.main:app --reload --host 127.0.0.1 --port 8000",
+    "dev:worker": "cd services/api && .venv/bin/python -m app.workers.runner"
+  }
+}
